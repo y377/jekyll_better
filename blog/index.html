@@ -1,0 +1,96 @@
+---
+layout: default
+title: 1
+pagination:
+ enabled: true
+---
+<div class="container" id="background_test">
+    <div class="row pt-5">
+        <!--         {% if paginator.total_pages > 1 %}
+        {% if paginator.previous_page %}
+        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}"><i class="bi bi-caret-left-fill fs-1"></i></a>
+        </button>
+        {% endif %}
+        {% if paginator.next_page %}
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <a class="" href="{{ paginator.next_page_path | prepend: site.baseurl }}"><i class="bi bi-caret-right-fill fs-1"></i></a>
+        </button>
+        {% endif %}
+        {% endif %} -->
+        <div class="col-lg-7 col-md-8 col-sm-12" id="carouselExampleCaptions" data-bs-ride="carousel">
+            {% for post in paginator.posts %}
+            <blockquote class="border-start border-3 border-primary border-opacity-50 bg-light">
+                <div class="row ps-5">
+                    <div class="col-md-8 col-sm-12 col-12 align-self-center"> <a class="lead text-dark text-decoration-none hvr-underline-from-left" href="{{ post.url }}">{{ post.title }}</a></div>
+                    <div class="col-md-1 col-sm-4 col-4 align-self-center">
+                        <button type="button" class="btn btn-outline-dark border-0" data-bs-toggle="collapse" data-bs-target="#{{ post.title }}" aria-expanded="false" aria-controls="{{ post.title }}"><i class="bi bi-caret-down"></i></button> </div>
+                    <div class="col-md-1 col-sm-4 col-4 align-self-center"> <i class="{% if forloop.index < 4 %}bi bi-calendar-plus text-danger{%endif%}{% if forloop.index >= 4 %}bi bi-calendar{%endif%}{% if forloop.index >= 9 %}bi bi-calendar-minus text-success{%endif%}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.date | date: '%F' }}"></i></div>
+                    <div class="col-md-1 col-sm-4 col-4 align-self-center"> <i class="bi bi-person-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author | upcase }}"></i></div>
+                </div>
+                <div class="row">
+                    <div class="collapse" id="{{ post.title }}">
+                        <i class="bi bi-quote "></i>{{ post.excerpt | strip_html | truncate: 56,"......" | strip_newlines }}
+                    </div>
+                </div>
+            </blockquote>
+            {% endfor %}
+            <!--             <div class="row align-self-center">
+                <ul class="list-inline">
+                    {% if paginator.page_trail %}
+                    {% for trail in paginator.page_trail %}
+                    <li class="list-inline-item {% if page.url==trail.path %}text-decoration-none text-bg-dark{% endif %}">
+                        <a class="{% if page.url==trail.path %}text-decoration-none text-bg-dark{% endif %} fs-5" href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                    <h2 class="text-end">{{page.pagination_info.curr_page}}<i class="bi bi-slash-lg text-warning"></i>{{page.pagination_info.total_pages}}页</h2>
+                </ul>
+
+            </div> -->
+        </div>
+        <div class="col-lg-2 col-md-1 col-sm-12">
+            <ul class="list-group list-group-flush">
+                {% assign tags = site.posts | all_tags %}
+                {% for tag in tags %}
+                {% assign tag_slug = tag['name'] | slugify: "raw" %}
+                <li class="list-group-item list-group-item-action">
+                    <a class="text-decoration-none text-dark align-middle" href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }} rel="category tag">
+                        <i class="bi bi-bookmarks">{{ tag['name'] }}</i><span class="badge text-dark">{{ tag['count'] }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <nav aria-label="pagination">
+            {% if paginator.total_pages > 1 %}
+            <ul class="pagination">
+                {% if paginator.previous_page %}
+                <li class="page-item">
+                    <a class="page-link shadow-none" aria-label="Previous" href="{{ paginator.previous_page_path | relative_url }}"><i class="bi bi-caret-left-fill"></i></a>
+                    {% else %}
+                </li>
+                {% endif %}
+                {% if paginator.page_trail %}
+                {% for trail in paginator.page_trail %}
+                <li {% if page.url==trail.path %}class="page-item active" aria-current="page" {% endif %}>
+                    <a class="page-link shadow-none" href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+                </li>
+                {% endfor %}
+                {% endif %}
+                {% if paginator.next_page %}
+                <li class="page-item"><a class="page-link shadow-none" aria-label="Next" href="{{ paginator.next_page_path | relative_url }}"><i class="bi bi-caret-right-fill"></i></a></li>
+                {% else %}
+                {% endif %}
+                <li>{{page.pagination_info.curr_page}}<i class="bi bi-slash-lg text-warning"></i>{{page.pagination_info.total_pages}}页</li>
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</div>
+<script type="text/javascript">
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>

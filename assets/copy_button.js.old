@@ -1,0 +1,45 @@
+window.addEventListener("load", event_pageLoaded, false);
+
+function event_pageLoaded() {
+    let codeChunk = document.querySelectorAll("pre > code:nth-child(2)");
+    for (let ii = 0; ii < codeChunk.length; ii++) {
+        let pre = codeChunk.item(ii);
+        let btns = document.createElement("button");
+        // btns.insertAdjacentElement('afterend', btns);
+        // btns.insertAdjacentHTML('afterbegin', '<i class="bi bi-clipboard text-white" data-bs-toggle="tooltip" title="复制"></i>');
+        btns.innerHTML = '<i class="bi bi-clipboard text-white"></i>';
+        btns.classList.add("btn", "btn-none");
+        pre.appendChild(btns, pre.nextSibling);
+        btns.setAttribute("data-clipboard-action", "copy");
+        var clipboard = new ClipboardJS('[data-clipboard-action="copy"]', {
+            target: function(trigger) {
+                return trigger.parentElement;
+            },
+        });
+
+        clipboard.on('success', function(e) {
+            let close_btn = document.querySelectorAll('.btn-none');
+            for (let i = 0; i < close_btn.length; i++) {
+                close_btn[i].addEventListener('click', function() {
+
+                    this.innerHTML = '<i class="bi bi-clipboard-check text-success fs-3"></i>';
+
+
+
+                    // this.insertAdjacentHTML('afterbegin', '<i class="bi bi-clipboard-check text-success fs-3"></i>');
+                })
+            }
+            // console.info('Action:', e.action);
+            console.info('Text:', e.text);
+
+
+            // btnss = document.getElementsByClassName("bi bi-clipboard text-white")[0]
+            // btns.innerHTML = '<i class="bi bi-clipboard-check text-success fs-3"></i>';
+
+
+            e.clearSelection();
+        });
+
+
+    }
+};

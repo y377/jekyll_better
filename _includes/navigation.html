@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container">
+        <a class="navbar-brand navbar-text" href="{{site.url}}"><span>{{ site.title }}</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <div class="navbar-nav nav-pills nav-fill flex-sm-fill flex-md-fill flex-lg-fill "> -->
+            <div class="navbar-nav nav-fill flex-sm-fill flex-md-fill flex-lg-fill">
+                {% for item in site.data.navigation.nav %}
+                <a href="{{ item.link }}" class="nav-link {% if item.link == page.url %}active{% endif %}">{{ item.name }}</a>
+                {% endfor %}
+                <div class="nav-item dropdown">
+                    {% for hh in site.data.navigation.three %}
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ hh.title }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for kk in hh.subfolderitems %}
+                        <li>
+                            <a class="dropdown-item" href="{{kk.url}}">{{ kk.page }}</a>
+                        </li>
+                        {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% for item in site.data.navigation.people %}
+                <a href="{{ item.link }}" class="nav-link {% if item.link == page.url %}active{% endif %}">{{ item.name }}</a>
+                {% endfor %}
+                <div class="nav-item dropdown">
+                    {% for fff in site.data.navigation.four %}
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ fff.title }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for yyy in fff.subfolderitems %}
+                        <li>
+                            <a class="dropdown-item" href="#">{{ yyy.page }}</a>
+                        </li>
+                        {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-search"></i></button>
+        </div>
+    </div>
+</nav>
+

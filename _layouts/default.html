@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="icon" href="/assets/image/运.svg" crossorigin="anonymous">
+    <script src="/assets/search.js"></script>
+    <script src="/assets/js/popper.js"></script>
+    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+    <style type="text/css">
+    /*    #home {
+        background-color: #FF3CAC;
+        background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: auto;
+        min-height: auto;
+    }*/
+
+    #home-1 {
+        background-color: #FF3CAC;
+        background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: auto;
+        min-height: auto;
+    }
+
+    #home {
+        background-image: url(/assets/image/stacked-peaks-haikei.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: auto;
+        min-height: auto;
+    }
+
+    #home2 {
+        background-image: url(https://cn.bing.com/th?id=OHR.AntarcticaDay_ROW5416995092_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: auto;
+        min-height: auto;
+    }
+
+    #blog {
+        background-image: url(/assets/image/在线学习.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: auto;
+        min-height: auto;
+    }
+
+    #bg-1 {
+        background-image: url(/assets/image/bg-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: auto;
+        min-height: auto;
+    }
+
+
+    /*    #search_box {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }*/
+    </style>
+    {% feed_meta %}
+    {% seo %}
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <form class="flex-end" role="search" id="search_box">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">站内搜索</h5>
+                    <button type="button" class="bi bi-x-lg text-primary border-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="bi bi-search text-secondary"></i></span>
+                        <input type="search" class="form-control shadow-none" id="search-input" placeholder=" " autofocus="autofocus">
+                    </div>
+                    <ul class="list-group pt-2" id="results-container"></ul>
+                </div>
+            </div>
+        </form>
+    </header>
+    {% include navigation.html %}
+    <main class="container-fluid">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+<!--     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <script>
+    anchors.options = {
+        icon: '',
+        class: 'bi bi-link text-danger'
+    };
+    anchors.add();
+    </script> -->
+</body>
+<script type="text/javascript">
+var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li class="list-group-item"><a class="lead text-dark text-decoration-none hvr-underline-from-left" href="{{ site.url }}{url}">{title}</a></li>'
+})
+</script>
+
+</html>

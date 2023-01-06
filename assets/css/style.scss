@@ -1,0 +1,15 @@
+---
+---
+@import "main";
+@import "/assets/font/bootstrap-icons.css";
+
+/*footer {
+    background-image: url("/assets/image/wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: 100%, 300px;
+}*/
+
+table {
+    @extend .table,.table-bordered,.table-hover;
+}
+

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="container" id="tag_layout">
+    <h2 class="text-bg-dark text-center p-4 rounded">带有"{{ page.tag-name }}"标签的文章</h2>
+    <ul class="list-group">
+        {% for post in site.posts %}
+        {% if post.tags contains page.tag-name %}
+        <li class="list-group-item list-group-item-action list-group-item-{% if forloop.index == 1 %}primary{% endif %}{% if forloop.index == 2 %}secondary{%endif%}{% if forloop.index == 3 %}light{%endif%}{% if forloop.index == 4 %}info{%endif%}{% if forloop.index == 5 %}warning{%endif%}{% if forloop.index == 6 %}danger{%endif%}{% if forloop.index == 7 %}success{%endif%}{% if forloop.index == 8 %}dark{%endif%}">
+      	<a href=" {{ post.url }}">{{ post.title }}</a>, published {{ post.date | date: "%Y-%m-%d" }}</li>
+        {% endif %}
+        {% endfor %}
+  
+  </ul>
+</div>

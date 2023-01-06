@@ -1,0 +1,135 @@
+---
+layout: default
+title: 帖子页面
+---
+<style type="text/css">
+pre {
+    position: relative;
+}
+
+code>button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*display: inline-block*/
+    /*opacity: 0;*/
+}
+
+pre>code {
+    opacity: 1;
+}
+
+/*    pre:hover {
+        opacity: 0;
+    }*/
+
+pre>button:hover {
+    opacity: 1;
+}
+
+/*pre > button:active;*/
+</style>
+<div class="container container px-0 px-sm-0 px-md-1 px-lg-2 g-0">
+    <ul class="list-inline">
+        {% for mym in site.pages %}
+        <!-- <li class="list-inline-item"> -->
+        {% if mym.url contains "index" %}
+        <a class="text-decoration-none fs-4 link-secondary" href="{{ mym.url }}" title="{{ mym.title }}">{{ mym.title }}</a>
+        <!-- <i class="bi bi-dash "></i> -->
+        <i class="bi bi-dot text-light"></i>
+        {% endif %}
+        <!-- </li> -->
+        {% endfor %}
+    </ul>
+    <div class="text-bg-success bg-gradient p-3">
+        <h3 class="text-center">{{ page.title }}</h3>
+        <p class="text-end">
+            {{ page.date | date: "%Y-%m-%d" }}
+            {% assign author = site.authors | where: 'short_name', page.author | first %}
+            {% if author %}
+            - <a href="{{ author.url }}">{{ author.name }}</a>
+            {% endif %}
+        </p>
+    </div>
+    {{ content }}
+    <!-- LikeBtn.com BEGIN -->
+    <span class="likebtn-wrapper py-4 start-50" data-lang="zh_CN" data-ef_voting="grow" data-identifier="item_1" data-counter_type="percent" data-counter_count="true" data-share_size="small"></span>
+</div>
+<script src="/assets/js/highlight.min.js"></script>
+<script type="text/javascript" src="/assets/js/highlight.ln.js"></script>
+<script>
+hljs.highlightAll();
+</script>
+<script type="text/javascript" src="/assets/clipboard.min.js"></script>
+<script type="text/javascript" src="/assets/copy_button.js"></script>
+<script src="/assets/js/anchor_431.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/assets/copy_anchor.js"></script>
+<script>
+anchors.options = {
+    visible: 'hover',
+    icon: ''
+};
+anchors.add();
+for (var r = 0; r < document.getElementsByClassName("anchorjs-link").length; r++) {
+    var danchors = document.getElementsByClassName("anchorjs-link");
+    var danchorshref = danchors[r].href;
+    danchors[r].setAttribute('data-clipboard-text', danchorshref);
+}
+</script>
+<!-- LikeBtn.com BEGIN -->
+<!-- <script>
+(function(d, e, s) {
+    if (d.getElementById("likebtn_wjs")) return;
+    a = d.createElement(e);
+    m = d.getElementsByTagName(e)[0];
+    a.async = 1;
+    a.id = "likebtn_wjs";
+    a.src = s;
+    m.parentNode.insertBefore(a, m)
+})(document, "script", "//w.likebtn.com/js/w/widget.js");
+</script> -->
+<!-- LikeBtn.com END -->
+<!-- <script>
+// const copy_mao = document.querySelectorAll('.octicon');
+// // new ClipboardJS('copy_mao', {
+// //     text: function(trigger) {
+// //         return trigger.getAttribute('href');
+// //     }
+// // });
+// var clipboard = new ClipboardJS('copy_mao', {
+//     target: function() {
+//         return document.querySelectorAll('a');
+//     },
+// });
+
+
+
+
+// add deep anchor link href value to data-clipboard-text attribute for ClipboardJS
+for (var r = 0; r < document.getElementsByClassName("octicon").length; r++) {
+    var danchors = document.getElementsByClassName("octicon");
+    var danchorshref = danchors[r].href;
+    danchors[r].setAttribute('data-clipboard-text', danchorshref);
+}
+
+// run this after running AnchorJS
+let anchorjsLinks = document.querySelectorAll(".octicon");
+
+var clipboard = new ClipboardJS('anchorjsLinks', {
+    target: function() {
+        return document.querySelectorAll('anchorjsLinks');
+    },
+});
+
+// clipboard.on('success', function(e) {
+//     console.info('Action:', e.action);
+//     console.info('Text:', e.text);
+//     console.info('Trigger:', e.trigger);
+// });
+
+// clipboard.on('error', function(e) {
+//     console.info('Action:', e.action);
+//     console.info('Text:', e.text);
+//     console.info('Trigger:', e.trigger);
+// });
+</script> -->
