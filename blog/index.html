@@ -2,22 +2,10 @@
 layout: default
 title: 1
 pagination:
- enabled: true
+  enabled: true
 ---
 <div class="container" id="background_test">
     <div class="row pt-5">
-        <!--         {% if paginator.total_pages > 1 %}
-        {% if paginator.previous_page %}
-        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}"><i class="bi bi-caret-left-fill fs-1"></i></a>
-        </button>
-        {% endif %}
-        {% if paginator.next_page %}
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <a class="" href="{{ paginator.next_page_path | prepend: site.baseurl }}"><i class="bi bi-caret-right-fill fs-1"></i></a>
-        </button>
-        {% endif %}
-        {% endif %} -->
         <div class="col-lg-7 col-md-8 col-sm-12" id="carouselExampleCaptions" data-bs-ride="carousel">
             {% for post in paginator.posts %}
             <blockquote class="border-start border-3 border-primary border-opacity-50 bg-light">
@@ -35,19 +23,6 @@ pagination:
                 </div>
             </blockquote>
             {% endfor %}
-            <!--             <div class="row align-self-center">
-                <ul class="list-inline">
-                    {% if paginator.page_trail %}
-                    {% for trail in paginator.page_trail %}
-                    <li class="list-inline-item {% if page.url==trail.path %}text-decoration-none text-bg-dark{% endif %}">
-                        <a class="{% if page.url==trail.path %}text-decoration-none text-bg-dark{% endif %} fs-5" href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
-                    </li>
-                    {% endfor %}
-                    {% endif %}
-                    <h2 class="text-end">{{page.pagination_info.curr_page}}<i class="bi bi-slash-lg text-warning"></i>{{page.pagination_info.total_pages}}页</h2>
-                </ul>
-
-            </div> -->
         </div>
         <div class="col-lg-2 col-md-1 col-sm-12">
             <ul class="list-group list-group-flush">
