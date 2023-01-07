@@ -41,8 +41,8 @@ collections:
 
 jekyll_timeago:
   depth: 2
-  threshold: 0.05
-  translations_path: "/_locales/*.yaml"
+  threshold: 0.1
+  translations_path: "data/timeago_zh_hans.yaml"
   default_locale: 'zh_hans'
   available_locales:
     - 'en'

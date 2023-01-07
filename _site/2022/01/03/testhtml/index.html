@@ -287,11 +287,12 @@ pre>button:hover {
     </ul>
     <div class="text-bg-success bg-gradient p-3">
         <h3 class="text-center">html代码高亮</h3>
-        <p class="text-end">
-            2022-01-03
+        <time class="text-end" datetime="2022-01-03">
+            2022-01-03<vr>
+            最近更新 3周  3天以前
             
             
-        </p>
+        </vr></time>
     </div>
     <h2 id="帖子摘要应该不能直接摘要到代码块部分否则会让标签泛滥">帖子摘要应该不能直接摘要到代码块部分,否则会让<code>标签泛滥</code>
 </h2>
@@ -433,24 +434,24 @@ var clipboard = new ClipboardJS('anchorjsLinks', {
 // });
 </script> -->
     </main>
-    <footer class="footer mt-auto bg-dark">
+    <footer class="footer mt-auto py-3 bg-dark bg-gradient">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <ul class="list-unstyled text-white">
                     <li>
-                        <h5>
+                        <address>
 <i class="bi bi-envelope"></i><a href="mailto:contact@yaju.com" class="text-decoration-none text-white">contact@yaju.com</a>
-</h5>
+</address>
                     </li>
                     <li>
-                        <h5>
+                        <address>
 <i class="bi bi-phone"></i><a href="tel:" class="text-decoration-none text-white font-monospace">+86-12349876</a>
-</h5>
+</address>
                     </li>
                     <li>
-                        <h5>
-<i class="bi bi-geo-alt"></i>江苏省解放东路888号</h5>
+                        <address>
+<i class="bi bi-geo-alt"></i>江苏省解放东路888号</address>
                     </li>
                 </ul>
             </div>
@@ -483,7 +484,7 @@ var clipboard = new ClipboardJS('anchorjsLinks', {
     d2.insertAdjacentHTML('beforeend', year);
     </script>
 </footer>
-<!--     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <!--     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
     <script>
     anchors.options = {
         icon: '',
@@ -500,5 +501,13 @@ var sjs = SimpleJekyllSearch({
     searchResultTemplate: '<li class="list-group-item"><a class="lead text-dark text-decoration-none hvr-underline-from-left" href="http://10.10.10.5:4000{url}">{title}</a></li>'
 })
 </script>
+<script type="text/javascript">
+document.querySelectorAll('p.code').forEach(el => {
+    // then highlight each
+    hljs.highlightElement(el);
+});
+html = hljs.highlight('<h1>Hello World!</h1>', {language: 'nginx'}).value
+</script>
+
 
 </html>

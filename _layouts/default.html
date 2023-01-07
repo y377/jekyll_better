@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <link rel="icon" href="/assets/image/运.svg" crossorigin="anonymous">
-    <script src="/assets/search.js"></script>
-    <script src="/assets/js/popper.js"></script>
-    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+    <link rel="icon" href="{{ "/assets/image/运.svg" | absolute_url }}" crossorigin="anonymous">
+    <script src="{{ "/assets/search.js"| absolute_url }}"></script>
+    <script src="{{ "/assets/js/popper.js"| absolute_url }}"></script>
+    <script src="{{ "/assets/js/bootstrap/bootstrap.min.js"| absolute_url }}"></script>
     <style type="text/css">
     /*    #home {
         background-color: #FF3CAC;
@@ -95,7 +95,7 @@
         {{ content }}
     </main>
     {% include footer.html %}
-<!--     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+    <!--     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
     <script>
     anchors.options = {
         icon: '',
@@ -112,5 +112,13 @@ var sjs = SimpleJekyllSearch({
     searchResultTemplate: '<li class="list-group-item"><a class="lead text-dark text-decoration-none hvr-underline-from-left" href="{{ site.url }}{url}">{title}</a></li>'
 })
 </script>
+<script type="text/javascript">
+document.querySelectorAll('p.code').forEach(el => {
+    // then highlight each
+    hljs.highlightElement(el);
+});
+html = hljs.highlight('<h1>Hello World!</h1>', {language: 'nginx'}).value
+</script>
+
 
 </html>

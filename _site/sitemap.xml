@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://10.10.10.5:4000/2014/10/01/why-alibaba-ux-sucks/</loc>
-<lastmod>2014-10-01T00:00:00+08:00</lastmod>
-</url>
-<url>
 <loc>http://10.10.10.5:4000/2017/01/09/wechat-miniapp-ux/</loc>
 <lastmod>2017-01-09T00:00:00+08:00</lastmod>
 </url>
@@ -85,20 +81,28 @@
 <lastmod>2022-12-11T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://10.10.10.5:4000/2023/01/06/centos7-install-jekyll/</loc>
+<lastmod>2023-01-06T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://10.10.10.5:4000/tags/centos7%20jekyll/</loc>
+<lastmod>2023-01-06T23:40:35+08:00</lastmod>
+</url>
+<url>
 <loc>http://10.10.10.5:4000/tags/tag/</loc>
-<lastmod>2023-01-06T12:49:04+08:00</lastmod>
+<lastmod>2023-01-06T23:40:35+08:00</lastmod>
 </url>
 <url>
 <loc>http://10.10.10.5:4000/tags/test/</loc>
-<lastmod>2023-01-06T12:49:04+08:00</lastmod>
+<lastmod>2023-01-06T23:40:35+08:00</lastmod>
 </url>
 <url>
 <loc>http://10.10.10.5:4000/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</loc>
-<lastmod>2023-01-06T12:49:04+08:00</lastmod>
+<lastmod>2023-01-06T23:40:35+08:00</lastmod>
 </url>
 <url>
 <loc>http://10.10.10.5:4000/tags/%E6%96%87%E7%AB%A0/</loc>
-<lastmod>2023-01-06T12:49:04+08:00</lastmod>
+<lastmod>2023-01-06T23:40:35+08:00</lastmod>
 </url>
 <url>
 <loc>http://10.10.10.5:4000/404/</loc>

@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "centos7安装Jekyll",
+      "category" : "",
+      "tags"     : "centos7 jekyll",
+      "url"      : "/2023/01/06/centos7-install-jekyll/",
+      "date"     : "2023-01-06 00:00:00 +0800"
+    } ,
+  
+    {
       "title"    : "我",
       "category" : "",
       "tags"     : "test",
@@ -158,14 +166,6 @@
       "tags"     : "",
       "url"      : "/2017/01/09/wechat-miniapp-ux/",
       "date"     : "2017-01-09 00:00:00 +0800"
-    } ,
-  
-    {
-      "title"    : "Why Alibaba Ux Sucks",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/2014/10/01/why-alibaba-ux-sucks/",
-      "date"     : "2014-10-01 00:00:00 +0800"
     } 
   
 ]

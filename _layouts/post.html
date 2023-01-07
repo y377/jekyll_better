@@ -43,13 +43,14 @@ pre>button:hover {
     </ul>
     <div class="text-bg-success bg-gradient p-3">
         <h3 class="text-center">{{ page.title }}</h3>
-        <p class="text-end">
-            {{ page.date | date: "%Y-%m-%d" }}
+        <time class="text-end" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+            {{ page.date | date: "%Y-%m-%d" }}<vr>
+            最近更新 {{ page.last-modified-date | date: "%Y-%m-%d %H:%M" | timeago }}
             {% assign author = site.authors | where: 'short_name', page.author | first %}
             {% if author %}
             - <a href="{{ author.url }}">{{ author.name }}</a>
             {% endif %}
-        </p>
+        </time>
     </div>
     {{ content }}
     <!-- LikeBtn.com BEGIN -->
