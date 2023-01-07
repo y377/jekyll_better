@@ -14,5 +14,6 @@ group :jekyll_plugins do
   gem "jekyll-paginate-v2"
   gem "jekyll-spaceship"
   gem "jekyll-timeago"
+  gem "jekyll-sass-converter", "~> 2.0"
 end
 
