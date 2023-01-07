@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://10.10.10.5:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://10.10.10.5:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2023-01-06T23:40:35+08:00</updated><id>http://10.10.10.5:4000/feed.xml</id><title type="html">Xyz Co., LTD.</title><entry><title type="html">centos7安装Jekyll</title><link href="http://10.10.10.5:4000/2023/01/06/centos7-install-jekyll/" rel="alternate" type="text/html" title="centos7安装Jekyll" /><published>2023-01-06T00:00:00+08:00</published><updated>2023-01-06T00:00:00+08:00</updated><id>http://10.10.10.5:4000/2023/01/06/centos7-install-jekyll</id><content type="html" xml:base="http://10.10.10.5:4000/2023/01/06/centos7-install-jekyll/"><![CDATA[<h4 id="首先安装rvm">首先安装rvm</h4>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://10.10.10.5:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://10.10.10.5:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2023-01-07T16:36:12+08:00</updated><id>http://10.10.10.5:4000/feed.xml</id><title type="html">Xyz Co., LTD.</title><entry><title type="html">centos7安装Jekyll</title><link href="http://10.10.10.5:4000/2023/01/06/centos7-install-jekyll/" rel="alternate" type="text/html" title="centos7安装Jekyll" /><published>2023-01-06T00:00:00+08:00</published><updated>2023-01-06T00:00:00+08:00</updated><id>http://10.10.10.5:4000/2023/01/06/centos7-install-jekyll</id><content type="html" xml:base="http://10.10.10.5:4000/2023/01/06/centos7-install-jekyll/"><![CDATA[<h4 id="首先安装rvm">首先安装rvm</h4>
 <pre><code class="language-bash">gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 \curl -sSL https://get.rvm.io | bash -s stable
 rvm list            #查看Ruby版本
@@ -58,7 +58,7 @@ yum install make        make -v
   </tbody>
 </table>
 
-<p>3周  5天以前</p>
+<p>3周  6天以前</p>
 
 <h6 id="国际象棋">国际象棋</h6>
 
