@@ -40,8 +40,8 @@ collections:
 #    - 'zh_hans'
 
 jekyll_timeago:
-  depth: 2
-  threshold: 0.1
+  depth: 1
+  threshold: 0.01
   translations_path: "data/timeago_zh_hans.yaml"
   default_locale: 'zh_hans'
   available_locales:
