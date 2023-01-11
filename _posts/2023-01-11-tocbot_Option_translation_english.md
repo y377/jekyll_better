@@ -6,7 +6,7 @@ layout: post
 ### [tocbot](https://github.com/tscanlin/tocbot#options) **Options**
 
 | option  | value  | description  |
-| :------------ | :------------ | :------------: |
+| :------------ | :------------ | :------------ |
 | tocSelector  | `.js-toc`  | Where to render the table of contents  |
 |tocElement   | element  | Or, you can pass in a DOM node instead  |
 | contentSelector  | `.js-toc-content`  | Where to grab the headings to build the table of contents  |
