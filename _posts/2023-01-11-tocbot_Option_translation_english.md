@@ -2,7 +2,9 @@
 title: tocbot_english
 layout: post
 ---
-### [tocbot](https://github.com/tscanlin/tocbot#options) **Options**  
+
+### [tocbot](https://github.com/tscanlin/tocbot#options) **Options**
+
 | option  | value  | description  |
 | :------------ | :------------ | :------------: |
 | tocSelector  | `.js-toc`  | Where to render the table of contents  |
