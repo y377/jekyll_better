@@ -45,7 +45,9 @@ pre>button:hover {
         <h3 class="text-center">{{ page.title }}</h3>
         <time class="text-end" datetime="{{ page.date | date: '%Y-%m-%d' }}">
             {{ page.date | date: "%Y-%m-%d" }}<vr>
-            最近更新 {{ page.last-modified-date | date: "%Y-%m-%d %H:%M" | timeago }}
+           {% if page.last-modified-date > page.date %}
+            <i class="bi bi-magic text-warning">更新于{{ page.last-modified-date | timeago }}</i>
+            {% endif %}
             {% assign author = site.authors | where: 'short_name', page.author | first %}
             {% if author %}
             - <a href="{{ author.url }}">{{ author.name }}</a>
