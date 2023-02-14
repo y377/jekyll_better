@@ -19,7 +19,4 @@ jobs:
       - name: Jekyll Actions
         uses: helaili/jekyll-action@2.5.0
         with: 
-          target_branch: gh-pages
-          target_path: /
-          jekyll_build_options: "--destination ./build"
           token: ${{ secrets.GITHUB_TOKEN }}
