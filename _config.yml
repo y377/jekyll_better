@@ -21,11 +21,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-admin
   - jekyll-paginate-v2
   - jekyll-spaceship
   - jekyll-timeago
-  - nokogiri
 
 highlighter: none
 #paginate: 5
