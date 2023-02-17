@@ -6,7 +6,6 @@ layout: post
 ### [tocbot](https://github.com/tscanlin/tocbot#options) **Options**
 
 <div class="table-responsive">
-  
 | option  | value  | description  |
 | :------------ | :------------ | :------------ |
 | tocSelector  | `.js-toc`  | Where to render the table of contents  |
@@ -47,5 +46,4 @@ layout: post
 | basePath  | `''`  | Set the base path, useful if you use a `base` tag in `head`  |
 | disableTocScrollSync  | false  | Only takes affect when `tocSelector` is scrolling, keep the toc scroll position in sync with the content  |
 | tocScrollOffset  | 0  | Offset for the toc scroll (top) position when scrolling the page. Only effective if `disableTocScrollSync` is false.  |
-  
 </div>
