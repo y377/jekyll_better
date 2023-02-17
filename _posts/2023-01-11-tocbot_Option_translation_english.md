@@ -46,7 +46,7 @@ layout: post
 | skipRendering  | false  | prevent ToC DOM rendering if it's already rendered by an external system  |
 | headingLabelCallback  | false  | Optional callback to change heading labels.For example it can be used to cut down and put ellipses on multiline headings you deem too long.Called each time a heading is parsed. Expects a string and returns the modified label to display.Additionally, the attribute `data-heading-label` may be used on a heading to specify a shorter string to be used in the TOC.function (string) => string  |
 | ignoreHiddenElements  | false  | ignore headings that are hidden in DOM  |
-| headingObjectCallback  | null  | Optional callback to modify properties of parsed headings. The heading element is passed in node parameter and information parsed by default parser is provided in obj parameter. Function has to return the same or modified obj. The heading will be excluded from TOC if nothing is returned.`function (object, HTMLElement) => object / void`  |
+| headingObjectCallback  | null  | Optional callback to modify properties of parsed headings. The heading element is passed in node parameter and information parsed by default parser is provided in obj parameter. Function has to return the same or modified obj. The heading will be excluded from TOC if nothing is returned.`{% raw %}function (object, HTMLElement) => object | void`{% endraw %}  |
 | basePath  | `''`  | Set the base path, useful if you use a `base` tag in `head`  |
 | disableTocScrollSync  | false  | Only takes affect when `tocSelector` is scrolling, keep the toc scroll position in sync with the content  |
 | tocScrollOffset  | 0  | Offset for the toc scroll (top) position when scrolling the page. Only effective if `disableTocScrollSync` is false.  |
