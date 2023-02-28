@@ -18,20 +18,20 @@ cp /root/.acme.sh/你的证书路径/fullchain.cer /etc/nginx/ssl/你的nginx证
 ##### 3. 安装自动续签（这是一条命令，尾部 “\” 表示：自动换行）
 
 ```bash
-acme.sh --install-cert -d demo.navigation.heyun.vip \
+acme.sh --install-cert -d demo.sample.vip \
 --key-file       /root/.acme.sh/demo.sample.vip/sample.vip.key  \
 --fullchain-file /root/.acme.sh/demo.sample.vip/fullchain.cer \
 --reloadcmd     "service nginx force-reload"
 ```
 
 ##### 4. 如果`service nginx force-reload`没效果，执行下面命令：
- > 先`nginx -t`，再`systemctl restart nginx`
+  >  先`nginx -t`，再`systemctl restart nginx`
 
 *另请注意ECC加密的使用方法(前提是如果你申请的ECC加密)，加上*`--ecc`
 
 ```bash
-acme.sh --install-cert -d www.heyun.vip \
---ecc --key-file /etc/nginx/ssl/www.heyun.vip/www.heyun.vip.key \
---fullchain-file /etc/nginx/ssl/www.heyun.vip/fullchain.cer \
+acme.sh --install-cert -d demo.sample.vip \
+--ecc --key-file /etc/nginx/ssldemo.sample.vip/demo.sample.vip.key \
+--fullchain-file /etc/nginx/ssl/demo.sample.vip/fullchain.cer \
 --reloadcmd "service nginx force-reload"
 ```
