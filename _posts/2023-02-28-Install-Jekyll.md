@@ -64,5 +64,5 @@ rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://
   > 如果这三个命令没有输出显示版本号，证明当前系统未包含，最好还是安装
 
 #### 7. 鸡动人心的时刻，安装*Jekyll*
-  > gem install bundler jekyll
+  > `gem install bundler jekyll`
   > *bundler*是什么？那是因为官网推荐最好安装*bundle*
