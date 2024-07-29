@@ -41,19 +41,17 @@ pre>button:hover {
         <!-- </li> -->
         {% endfor %}
     </ul>
-    <div class="text-bg-success bg-gradient p-3">
-        <h3 class="text-center">{{ page.title }}</h3>
-        <time class="text-end" datetime="{{ page.date | date: '%Y-%m-%d' }}">
-            {{ page.date | date: "%Y-%m-%d" }}<vr>
-           {% if page.last-modified-date > page.date %}
+    <h3 class="text-center py-3">{{ page.title }}</h3>
+    <p class="text-end py-2" datetime="{{ 'today' | date: '%Y-%m-%d' }}">
+        {{ "today" | date: "%Y-%m-%d" }}<vr>
+            {% if page.last-modified-date > page.date %}
             <i class="bi bi-magic text-warning">更新于{{ page.last-modified-date | timeago }}</i>
             {% endif %}
             {% assign author = site.authors | where: 'short_name', page.author | first %}
             {% if author %}
             - <a href="{{ author.url }}">{{ author.name }}</a>
             {% endif %}
-        </time>
-    </div>
+    </p>
     {{ content }}
     <!-- LikeBtn.com BEGIN -->
     <span class="likebtn-wrapper py-4 start-50" data-lang="zh_CN" data-ef_voting="grow" data-identifier="item_1" data-counter_type="percent" data-counter_count="true" data-share_size="small"></span>
